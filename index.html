@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NightServes - Order Food at Any Hour!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">NightServes</h1>
+    <p class="tagline">Delicious food, delivered anytime at night!</p>
+  </header>
+
+  <section class="food-items">
+    <h2>Our Food Items</h2>
+    <div class="item-container">
+      <div class="item-card">
+        <img src="maggieimage.jpg" alt="Noodles">
+        <h3>Noodles</h3>
+        <button class="order-btn" onclick="window.open('maggiepg.html','_blank')">Order Now</button>
+      </div>
+      <div class="item-card">
+        <img src="biscuits.jpg" alt="Biscuits">
+        <h3>Biscuits</h3>
+        <button class="order-btn"  onclick="window.open('notavail.html','_blank')">Order Now</button>
+      </div>
+      <div class="item-card">
+        <img src="lays.jpg" alt="Chips">
+        <h3>Kurkure/Chips</h3>
+        <button class="order-btn" onclick="window.open('notavail.html','_blank')">Order Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p>"Amazing service, loved the food! 5/5!"</p>
+        <div class="rating">★★★★★</div>
+      </div>
+      <div class="testimonial">
+        <p>"Quick delivery and delicious food. Highly recommend."</p>
+        <div class="rating">★★★★☆</div>
+      </div>
+      <div class="testimonial">
+        <p>"The best late-night food delivery. Will order again!"</p>
+        <div class="rating">★★★★★</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="delivery-option">
+    <h2>Room Delivery Available</h2>
+    <p>We deliver food directly to your room, ensuring it's hot and fresh, anytime at night!</p>
+  </section>
+
+  <section class="contact-us">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" placeholder="Your Message" ></textarea>
+      <button type="submit" class="contact-btn" class="submitbtn">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>NightServes © 2024 | Serving deliciousness all night long!</p>
+  </footer>
+
+  <script>
+    // WhatsApp redirection with form data
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const whatsappURL = `https://wa.me/9258902271?text=Name:%20${name}%0AEmail:%20${email}%0AMessage:%20${message}`;
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+</body>
+</html>

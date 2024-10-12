@@ -104,10 +104,10 @@
         <input type="text" id="room" required />
 
         <label for="item-name">Item Name:</label>
-        <input type="text" id="item-name" value=" Kurkure/Chips" disabled />
+        <input type="text" id="item-name" value=" Takatak" disabled />
 
         <label for="item-image">Product Image:</label>
-        <img src="lays.jpg" alt="Kurkure/Chips" class="product-image" />
+        <img src="takatak.jpg" alt="Kurkure/Chips" class="product-image" />
 
         <label for="quantity">Total Number of Items:</label>
         <input type="number" id="quantity" min="1" value="1" required />
@@ -123,11 +123,11 @@
 
       <div id="bill-section" style="display: none">
         <h3>Your Bill</h3>
-        <p>Item Name: <span id="bill-item-name">Kurkure/Chips</span></p>
+        <p>Item Name: <span id="bill-item-name">Takatak</span></p>
         <p>Total Items: <span id="bill-quantity">1</span></p>
-        <p>Product Price: ₹15</p>
+        <p>Product Price: ₹13</p>
         <p>Delivery Charge: ₹2</p>
-        <p>Total Amount: ₹<span id="total-amount">17</span></p>
+        <p>Total Amount: ₹<span id="total-amount">15</span></p>
         <button id="pay-now" class="pay-now-btn">Pay Now</button>
       </div>
 
@@ -155,7 +155,7 @@
           const quantity = parseInt(document.getElementById("quantity").value);
           const paymentMethod = document.getElementById("payment-method").value;
 
-          const productPrice = 15;
+          const productPrice = 13;
           const deliveryCharge = 2;
           const totalAmount = quantity * productPrice + deliveryCharge;
 
@@ -176,7 +176,7 @@
             document
               .getElementById("pay-now")
               .addEventListener("click", function () {
-                const whatsappMessage = `Hi, this is my order:\nName: ${name}\nMobile: ${mobile}\nEmail: ${email}\nRoom No: ${room}\nItem: Chips/Kurkure\nQuantity: ${quantity}\nTotal Amount: ₹${totalAmount}\nPayment Method: Cash on Delivery`;
+                const whatsappMessage = `Hi, this is my order:\nName: ${name}\nMobile: ${mobile}\nEmail: ${email}\nRoom No: ${room}\nItem: Takatak\nQuantity: ${quantity}\nTotal Amount: ₹${totalAmount}\nPayment Method: Cash on Delivery`;
                 window.open(
                   `https://wa.me/9258902271?text=${encodeURIComponent(
                     whatsappMessage
@@ -226,7 +226,7 @@
               .addEventListener("click", function () {
                 const transactionId =
                   document.getElementById("transaction-id").value;
-                const whatsappMessage = `Hi, this is my order:\nName: ${name}\nMobile: ${mobile}\nEmail: ${email}\nRoom No: ${room}\nItem: Chips/Kurkure\nQuantity: ${quantity}\nTotal Amount: ₹${totalAmount}\nPayment Method: UPI\nTransaction ID: ${transactionId}`;
+                const whatsappMessage = `Hi, this is my order:\nName: ${name}\nMobile: ${mobile}\nEmail: ${email}\nRoom No: ${room}\nItem: Takatak\nQuantity: ${quantity}\nTotal Amount: ₹${totalAmount}\nPayment Method: UPI\nTransaction ID: ${transactionId}`;
                 window.open(
                   `https://wa.me/9258902271?text=${encodeURIComponent(
                     whatsappMessage
